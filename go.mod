@@ -1,4 +1,4 @@
-module lets-go
+module github.com/husniramdani/lets-go
 
 go 1.15
 

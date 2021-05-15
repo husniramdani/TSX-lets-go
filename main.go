@@ -1,6 +1,6 @@
 package main
 
-import "lets-go/api"
+import "github.com/husniramdani/lets-go/api"
 
 func main() {
 	api.Run()

@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"os"
 
-	"lets-go/api/responses"
+	"github.com/husniramdani/lets-go/api/responses"
 )
 
 type Urlapi struct {
@@ -23,6 +23,7 @@ type Urlapi struct {
 }
 
 func (server *Server) Tsv(w http.ResponseWriter, r *http.Request) {
+
 	csvFile, err := os.Open("./log_19950801.tsv")
 
 	if err != nil {
@@ -33,7 +34,6 @@ func (server *Server) Tsv(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		fmt.Println(err)
 	}
-
 	_, err = csvFile.Seek(int64(len(row)), io.SeekStart)
 	if err != nil {
 		fmt.Println(err)
